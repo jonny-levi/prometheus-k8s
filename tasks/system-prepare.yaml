@@ -18,3 +18,12 @@
     owner: jonathan
     group: jonathan
     mode: "0755"
+
+- name: Create Prometheus Config Map
+  ansible.builtin.shell: kubectl apply -f /tmp/prometheus-files/prometheus-config.yaml
+
+- name: Create Prometheus Deployment
+  ansible.builtin.shell: kubectl apply -f /tmp/prometheus-files/prometheus-deployment.yaml
+
+- name: Create Prometheus Service
+  ansible.builtin.shell: kubectl apply -f /tmp/prometheus-files/prometheus-service.yaml

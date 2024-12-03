@@ -22,7 +22,7 @@
 - name: Copying prometheus files under tmp folder
   ansible.builtin.copy:
     src: ~/projects/prometheus-k8s/prometheus-files
-    dest: /tmp/prometheus-files
+    dest: /tmp/
     owner: jonathan
     group: jonathan
     mode: "0755"
